@@ -3,50 +3,37 @@ import Router from "vue-router"
 import Helloworld from '@/components/HelloWorld.vue'
 import Link from "@/components/link.vue";
 import Login from "@/components/login.vue";
-import Registrasi from "@/components/register.vue";
-import Navbar from "@/components/navbar.vue";
+import Register from "@/components/register.vue";
+import Mobil from "@/views/About.vue";
 
 vue.use(Router)
 
 function configRoutes() {
-    return [
-        {
-            path:'/',
-            name:'HelloWorld',
+    return [{
+            path: '/',
             component: Helloworld
-
         },
         {
-            path:'/login',
-            name:'Login',
+            path: '/login',
             component: Login
-
         },
         {
-            path:'/register',
-            name:'Registrasi',
-            component: Registrasi
-
+            path: '/register',
+            component: Register
         },
         {
-            path:'/link',
-            name:'Link',
+            path: '/link',
             component: Link
-
         },
         {
-            path:'/Navbar',
-            name:'navbar',
-            component: Navbar
-
-        }
-
+            path: '/mobil',
+            component: Mobil
+        },
     ]
+}
 
-    }
-
-    const link = new Router ({
-  mode: "history",
-  routes: configRoutes(),  
+const link = new Router({
+    mode: "history",
+    routes: configRoutes(),
 });
 export default link;
